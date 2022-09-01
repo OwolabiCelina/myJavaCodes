@@ -12,9 +12,33 @@ public class Airconditioner {
         return on;
     }
 
-    public String isOff(String off) {
-        if (off == "off");
+    public String isOff(String off) throws Exception {
+        if (off == "off") {
+            System.out.println("AC is off");
+        }
+        else {
+            throw new Exception("Please off ac properly");
+        }
         return off;
+    }
+    public int increaseTemp(int increase) throws Exception {
+        if (increase > 30 ){
+            throw new Exception("Tempareture is invalid");
+        }
+        else {
+            System.out.println("The tempareture has increase to: " +increase);;
+        }
+        return increase;
+    }
+
+    public int decreaseTemp(int decrease) throws Exception {
+        if (decrease  < 16 ){
+            throw new Exception("Tempareture is invalid");
+        }
+        else {
+            System.out.println("The tempareture has decrease to: " +decrease);;
+        }
+        return decrease;
     }
 
 }
